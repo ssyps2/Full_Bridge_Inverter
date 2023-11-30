@@ -1,5 +1,5 @@
 Plecs {
-  Name          "voltage & current controller"
+  Name          "voltage & current controller - lag compensator"
   Version       "4.7"
   CircuitModel  "ContStateSpace"
   StartTime     "0.0"
@@ -47,7 +47,7 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [769, 30; 1535, 775]
+    Location      [0, 23; 1536, 776]
     ZoomFactor    1.14437
     SliderPosition [738, 0]
     ShowBrowser   off
@@ -614,7 +614,7 @@ Plecs {
       Type          Gain
       Name          "Gain2"
       Show          on
-      Position      [940, 165]
+      Position      [840, 165]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -638,7 +638,7 @@ Plecs {
       Type          Constant
       Name          "Rated Power"
       Show          on
-      Position      [990, 220]
+      Position      [890, 220]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -658,7 +658,7 @@ Plecs {
       Type          Sum
       Name          "Sum6"
       Show          off
-      Position      [1025, 165]
+      Position      [925, 165]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -682,7 +682,7 @@ Plecs {
       Type          TransferFunction
       Name          "Capacitor's TF"
       Show          on
-      Position      [1115, 165]
+      Position      [1015, 165]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -707,7 +707,7 @@ Plecs {
       Type          Goto
       Name          "Goto9"
       Show          off
-      Position      [1015, 130]
+      Position      [915, 130]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -719,103 +719,6 @@ Plecs {
       Parameter {
         Variable      "Visibility"
         Value         "1"
-        Show          off
-      }
-    }
-    Component {
-      Type          Sum
-      Name          "Sum3"
-      Show          off
-      Position      [890, 165]
-      Direction     up
-      Flipped       off
-      LabelPosition south
-      Parameter {
-        Variable      "IconShape"
-        Value         "2"
-        Show          off
-      }
-      Parameter {
-        Variable      "Inputs"
-        Value         "|++"
-        Show          off
-      }
-      Parameter {
-        Variable      "DataType"
-        Value         "10"
-        Show          off
-      }
-    }
-    Component {
-      Type          Gain
-      Name          "Kp1"
-      Show          on
-      Position      [765, 125]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      Parameter {
-        Variable      "K"
-        Value         "84.87"
-        Show          on
-      }
-      Parameter {
-        Variable      "Multiplication"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "DataType"
-        Value         "10"
-        Show          off
-      }
-    }
-    Component {
-      Type          Gain
-      Name          "Ki1"
-      Show          on
-      Position      [750, 225]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      Parameter {
-        Variable      "K"
-        Value         "226347.13"
-        Show          on
-      }
-      Parameter {
-        Variable      "Multiplication"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "DataType"
-        Value         "10"
-        Show          off
-      }
-    }
-    Component {
-      Type          TransferFunction
-      Name          "Integrator1"
-      Show          on
-      Position      [830, 225]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      Frame         [-30, -15; 30, 15]
-      Parameter {
-        Variable      "Numerator"
-        Value         "[1]"
-        Show          off
-      }
-      Parameter {
-        Variable      "Denominator"
-        Value         "[1 0]"
-        Show          off
-      }
-      Parameter {
-        Variable      "X0"
-        Value         "0"
         Show          off
       }
     }
@@ -924,7 +827,7 @@ Plecs {
       Type          TransferFunction
       Name          "Lag Compensator"
       Show          on
-      Position      [1105, 50]
+      Position      [725, 165]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -949,7 +852,7 @@ Plecs {
       Type          Scope
       Name          "V_dc"
       Show          on
-      Position      [1260, 165]
+      Position      [1160, 165]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1010,7 +913,7 @@ Plecs {
       Type          Math
       Name          "Math1"
       Show          on
-      Position      [1205, 165]
+      Position      [1105, 165]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1018,67 +921,6 @@ Plecs {
         Variable      "Operator"
         Value         "2"
         Show          off
-      }
-    }
-    Component {
-      Type          Scope
-      Name          "Scope"
-      Show          on
-      Position      [715, 80]
-      Direction     up
-      Flipped       off
-      LabelPosition south
-      Location      [0, 23; 1536, 796]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAAD8A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAH4A////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAAB+AP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABfAP///wAAB4AAAAOnAAAA"
-"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
-"AAAAA=="
-      SavedViews    "AAAAAgAAAAA="
-      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAA"
-"wAAAH0AAAACAAAAfQAAAAEAAAB9AAAABwAAAH0AAAAGAAAAfQAAAAUAAAB9AAAABAAAAH0AAAAJAA"
-"AAfQAAAAgAAAB9AAAAigAAAAsBAAABAAAAAAAAAAAAAAAAff////8AAACBAAAAAAAAAAsAAABtAAA"
-"AAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAA"
-"AAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAA"
-"AAdAAAAAQAAAAAAAAPoAAAAAB0="
-      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-      Axes          "1"
-      TimeRange     "0.0"
-      ScrollingMode "1"
-      SingleTimeAxis "1"
-      Open          "0"
-      Ts            "-1"
-      SampleLimit   "0"
-      XAxisLabel    "Time / s"
-      ShowLegend    "2"
-      Axis {
-        Name          ""
-        AutoScale     1
-        MinValue      0
-        MaxValue      1
-        Signals       {"'error' of  DC Voltage Square"}
-        SignalTypes   [ ]
-        Untangle      0
-        KeepBaseline  off
-        BaselineValue 0
-      }
-      Fourier {
-        SingleXAxis       on
-        AxisLabel         "Frequency / Hz"
-        Scaling           0
-        PhaseDisplay      0
-        ShowFourierLegend off
-        Axis {
-          Name          ""
-          AutoScale     1
-          MinValue      0
-          MaxValue      1
-          Signals       {}
-          Untangle      0
-          KeepBaseline  off
-          BaselineValue 0
-        }
       }
     }
     Connection {
@@ -1182,7 +1024,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Rated Power"
       SrcTerminal   1
-      Points        [1025, 220]
+      Points        [925, 220]
       DstComponent  "Sum6"
       DstTerminal   3
     }
@@ -1192,29 +1034,6 @@ Plecs {
       SrcTerminal   1
       DstComponent  "Capacitor's TF"
       DstTerminal   1
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Kp1"
-      SrcTerminal   2
-      Points        [840, 125; 840, 165]
-      DstComponent  "Sum3"
-      DstTerminal   2
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Ki1"
-      SrcTerminal   2
-      DstComponent  "Integrator1"
-      DstTerminal   1
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Integrator1"
-      SrcTerminal   2
-      Points        [890, 225]
-      DstComponent  "Sum3"
-      DstTerminal   3
     }
     Connection {
       Type          Signal
@@ -1309,13 +1128,13 @@ Plecs {
       Type          Signal
       SrcComponent  "Gain2"
       SrcTerminal   2
-      Points        [985, 165]
+      Points        [885, 165]
       Branch {
         DstComponent  "Sum6"
         DstTerminal   2
       }
       Branch {
-        Points        [985, 130]
+        Points        [885, 130]
         DstComponent  "Goto9"
         DstTerminal   1
       }
@@ -1331,9 +1150,9 @@ Plecs {
       Type          Signal
       SrcComponent  "Capacitor's TF"
       SrcTerminal   2
-      Points        [1170, 165]
+      Points        [1070, 165]
       Branch {
-        Points        [1170, 280; 645, 280]
+        Points        [1070, 280; 645, 280]
         DstComponent  "Sum5"
         DstTerminal   3
       }
@@ -1389,8 +1208,8 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Sum3"
-      SrcTerminal   1
+      SrcComponent  "Lag Compensator"
+      SrcTerminal   2
       DstComponent  "Gain2"
       DstTerminal   1
     }
@@ -1398,25 +1217,8 @@ Plecs {
       Type          Signal
       SrcComponent  "Sum5"
       SrcTerminal   1
-      Points        [670, 165]
-      Branch {
-        Points        [695, 165]
-        Branch {
-          Points        [695, 125]
-          DstComponent  "Kp1"
-          DstTerminal   1
-        }
-        Branch {
-          Points        [695, 225]
-          DstComponent  "Ki1"
-          DstTerminal   1
-        }
-      }
-      Branch {
-        Points        [670, 80]
-        DstComponent  "Scope"
-        DstTerminal   1
-      }
+      DstComponent  "Lag Compensator"
+      DstTerminal   1
     }
     Annotation {
       Name          "<html><body>\n<p><span style=\" font-weight:600;\">Curren"
@@ -1430,7 +1232,7 @@ Plecs {
     Annotation {
       Name          "<html><body>\n<p><span style=\" font-weight:600;\">Voltag"
 "e Controller</span></p></body></html>"
-      Position      [790, 190]
+      Position      [750, 240]
     } 
   }
 }

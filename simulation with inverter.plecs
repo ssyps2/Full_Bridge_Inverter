@@ -47,9 +47,9 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [769, 30; 1535, 775]
+    Location      [1, 30; 767, 775]
     ZoomFactor    1
-    SliderPosition [486, 0]
+    SliderPosition [-1, 0]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -533,7 +533,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "K"
-        Value         "97.748"
+        Value         "99.94"
         Show          on
       }
       Parameter {
@@ -557,7 +557,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "K"
-        Value         "97.748*2608"
+        Value         "266667.21"
         Show          on
       }
       Parameter {
@@ -700,7 +700,7 @@ Plecs {
       Type          From
       Name          "From7"
       Show          off
-      Position      [715, 50]
+      Position      [790, 45]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -719,7 +719,7 @@ Plecs {
       Type          From
       Name          "From8"
       Show          off
-      Position      [715, 95]
+      Position      [790, 90]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -766,20 +766,20 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 26; 1536, 807]
+      Location      [0, 26; 1536, 811]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAD8A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAH4A////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAAB+AP///wAAAAMAAAeAAAAAcvw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABfAP///wAAB4AAAAM6AAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABfAP///wAAB4AAAAM/AAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL+AMAAAAHAAAAB"
-"gAAAH0AAAAHAAAAfQAAAAQAAAB9AAAABQAAAH0AAAAIAAAAfQAAAAkAAAB9AAAAAwAAAH0AAAeAAA"
-"AACwEAAAEAAAAAAAAAAAAAAAB9/////wAAAIEAAAAAAAAACwAAAIIAAAABAAAAAAAAAH0AAAABAAA"
-"AAAAAAH0AAAABAAAAAAAAAAAAAAABAAAAAAAAAAAAAAABAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAB"
-"AAAAAAAAAAAAAAABAAAAAAAAAAAAAAABAAAAAAAAAAAAAAABAAAAAAAABgQAAAABAAAAAAAAA+gAA"
-"AAAHQ=="
+      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAA"
+"wAAAH0AAAACAAAAfQAAAAEAAAB9AAAABwAAAH0AAAAGAAAAfQAAAAUAAAB9AAAABAAAAH0AAAAJAA"
+"AAfQAAAAgAAAB9AAAHgAAAAAsBAAABAAAAAAAAAAAAAAAAff////8AAACBAAAAAAAAAAsAAACCAAA"
+"AAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAA"
+"AAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAA"
+"Ab+AAAAAQAAAAAAAAPoAAAAAB0="
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
       Axes          "1"
       TimeRange     "0.0"
@@ -823,26 +823,26 @@ Plecs {
       Type          Saturation
       Name          "Saturation1"
       Show          on
-      Position      [1315, 500]
+      Position      [1335, 500]
       Direction     right
       Flipped       off
       LabelPosition south
       Parameter {
         Variable      "UpperLimit"
-        Value         "251.6*sqrt(2)"
-        Show          off
+        Value         "251.61*sqrt(2)"
+        Show          on
       }
       Parameter {
         Variable      "LowerLimit"
-        Value         "-251.6*sqrt(2)"
-        Show          off
+        Value         "-251.61*sqrt(2)"
+        Show          on
       }
     }
     Component {
       Type          Sum
       Name          "Sum4"
       Show          off
-      Position      [1315, 580]
+      Position      [1335, 580]
       Direction     right
       Flipped       off
       LabelPosition west
@@ -866,7 +866,7 @@ Plecs {
       Type          Goto
       Name          "Goto8"
       Show          off
-      Position      [1385, 500]
+      Position      [1405, 500]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1622,7 +1622,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "K"
-        Value         "83.013"
+        Value         "84.87"
         Show          on
       }
       Parameter {
@@ -1646,7 +1646,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "K"
-        Value         "83.013*2608"
+        Value         "226347.13"
         Show          on
       }
       Parameter {
@@ -1702,78 +1702,6 @@ Plecs {
         Variable      "Visibility"
         Value         "1"
         Show          off
-      }
-    }
-    Component {
-      Type          Reference
-      SrcComponent  "Components/Control/Filters/RMS Value"
-      Name          "RMS Value"
-      Show          on
-      Position      [770, 50]
-      Direction     up
-      Flipped       off
-      LabelPosition south
-      Frame         [-15, -15; 15, 15]
-      Parameter {
-        Variable      "x0"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "ts"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "fs"
-        Value         "50"
-        Show          off
-      }
-      Terminal {
-        Type          Input
-        Position      [-15, 0]
-        Direction     left
-      }
-      Terminal {
-        Type          Output
-        Position      [19, 0]
-        Direction     right
-      }
-    }
-    Component {
-      Type          Reference
-      SrcComponent  "Components/Control/Filters/RMS Value"
-      Name          "RMS Value1"
-      Show          on
-      Position      [770, 95]
-      Direction     up
-      Flipped       off
-      LabelPosition south
-      Frame         [-15, -15; 15, 15]
-      Parameter {
-        Variable      "x0"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "ts"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "fs"
-        Value         "50"
-        Show          off
-      }
-      Terminal {
-        Type          Input
-        Position      [-15, 0]
-        Direction     left
-      }
-      Terminal {
-        Type          Output
-        Position      [19, 0]
-        Direction     right
       }
     }
     Component {
@@ -1989,13 +1917,83 @@ Plecs {
       }
       Parameter {
         Variable      "ts"
-        Value         "0.0001"
+        Value         "0.0002"
         Show          off
       }
       Parameter {
         Variable      "ns"
         Value         "100"
         Show          off
+      }
+    }
+    Component {
+      Type          Voltmeter
+      Name          "Vm3"
+      Show          on
+      Position      [175, 295]
+      Direction     up
+      Flipped       off
+      LabelPosition west
+    }
+    Component {
+      Type          Scope
+      Name          "Scope3"
+      Show          on
+      Position      [280, 390]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Location      [0, 23; 1536, 796]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAAD8A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAH4A////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAAB+AP///wAAAAMAAAAAAAAAAPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABfAP///wAAB4AAAAOnAAAA"
+"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
+"AAAAA=="
+      SavedViews    "AAAAAgAAAAA="
+      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAA"
+"wAAAH0AAAACAAAAfQAAAAEAAAB9AAAABwAAAH0AAAAGAAAAfQAAAAUAAAB9AAAABAAAAH0AAAAJAA"
+"AAfQAAAAgAAAB9AAAA9AAAAAsBAAABAAAAAAAAAAAAAAAAff////8AAACBAAAAAAAAAAsAAADXAAA"
+"AAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAA"
+"AAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAA"
+"AAdAAAAAQAAAAAAAAPoAAAAAB0="
+      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+      Axes          "1"
+      TimeRange     "0.0"
+      ScrollingMode "1"
+      SingleTimeAxis "1"
+      Open          "0"
+      Ts            "-1"
+      SampleLimit   "0"
+      XAxisLabel    "Time / s"
+      ShowLegend    "1"
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Fourier {
+        SingleXAxis       on
+        AxisLabel         "Frequency / Hz"
+        Scaling           0
+        PhaseDisplay      0
+        ShowFourierLegend off
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
       }
     }
     Connection {
@@ -2022,8 +2020,16 @@ Plecs {
           }
         }
         Branch {
-          DstComponent  "C1"
-          DstTerminal   2
+          Points        [215, 330]
+          Branch {
+            DstComponent  "C1"
+            DstTerminal   2
+          }
+          Branch {
+            Points        [175, 330]
+            DstComponent  "Vm3"
+            DstTerminal   2
+          }
         }
       }
     }
@@ -2063,13 +2069,6 @@ Plecs {
       SrcTerminal   1
       DstComponent  "FETD3"
       DstTerminal   3
-    }
-    Connection {
-      Type          Wire
-      SrcComponent  "C1"
-      SrcTerminal   1
-      DstComponent  "R2"
-      DstTerminal   2
     }
     Connection {
       Type          Signal
@@ -2208,13 +2207,13 @@ Plecs {
       Type          Signal
       SrcComponent  "Saturation1"
       SrcTerminal   2
-      Points        [1350, 500]
+      Points        [1370, 500]
       Branch {
         DstComponent  "Goto8"
         DstTerminal   1
       }
       Branch {
-        Points        [1350, 550; 1315, 550]
+        Points        [1370, 550; 1335, 550]
         DstComponent  "Sum4"
         DstTerminal   2
       }
@@ -2223,13 +2222,13 @@ Plecs {
       Type          Signal
       SrcComponent  "Sum1"
       SrcTerminal   1
-      Points        [1275, 500]
+      Points        [1295, 500]
       Branch {
         DstComponent  "Saturation1"
         DstTerminal   1
       }
       Branch {
-        Points        [1275, 580]
+        Points        [1295, 580]
         DstComponent  "Sum4"
         DstTerminal   3
       }
@@ -2238,7 +2237,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Sum4"
       SrcTerminal   1
-      Points        [1315, 660]
+      Points        [1335, 660]
       DstComponent  "Gain1"
       DstTerminal   1
     }
@@ -2268,7 +2267,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Capacitor's TF"
       SrcTerminal   2
-      Points        [775, 510; 775, 685; 210, 685]
+      Points        [775, 510; 775, 650; 210, 650]
       DstComponent  "Sum5"
       DstTerminal   3
     }
@@ -2342,36 +2341,6 @@ Plecs {
         DstComponent  "Ki1"
         DstTerminal   1
       }
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "From7"
-      SrcTerminal   1
-      DstComponent  "RMS Value"
-      DstTerminal   1
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "RMS Value"
-      SrcTerminal   2
-      Points        [820, 50]
-      DstComponent  "Product1"
-      DstTerminal   2
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "From8"
-      SrcTerminal   1
-      DstComponent  "RMS Value1"
-      DstTerminal   1
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "RMS Value1"
-      SrcTerminal   2
-      Points        [820, 95]
-      DstComponent  "Product1"
-      DstTerminal   3
     }
     Connection {
       Type          Signal
@@ -2499,6 +2468,45 @@ Plecs {
       DstComponent  "Scope1"
       DstTerminal   1
     }
+    Connection {
+      Type          Signal
+      SrcComponent  "From8"
+      SrcTerminal   1
+      Points        [820, 90]
+      DstComponent  "Product1"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "From7"
+      SrcTerminal   1
+      Points        [820, 45]
+      DstComponent  "Product1"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "C1"
+      SrcTerminal   1
+      Points        [215, 230]
+      Branch {
+        DstComponent  "R2"
+        DstTerminal   2
+      }
+      Branch {
+        Points        [175, 230]
+        DstComponent  "Vm3"
+        DstTerminal   1
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Vm3"
+      SrcTerminal   3
+      Points        [220, 295; 220, 390]
+      DstComponent  "Scope3"
+      DstTerminal   1
+    }
     Annotation {
       Name          "<html><body>\n<p><span style=\" font-weight:600;\">Curren"
 "t Controller</span></p></body></html>"
@@ -2506,7 +2514,7 @@ Plecs {
     } 
     Annotation {
       Name          "<html><body>\n<p>anti-windup</p></body></html>"
-      Position      [1365, 580]
+      Position      [1385, 580]
     } 
     Annotation {
       Name          "<html><body>\n<p><span style=\" font-weight:600;\">Voltag"
