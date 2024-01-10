@@ -104,7 +104,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "Tag"
-        Value         "I_load"
+        Value         "I_ac"
         Show          off
       }
       Parameter {
@@ -213,7 +213,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "Tag"
-        Value         "I_load"
+        Value         "I_ac"
         Show          off
       }
       Parameter {
@@ -529,13 +529,6 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Sine Wave"
-      SrcTerminal   1
-      DstComponent  "V"
-      DstTerminal   3
-    }
-    Connection {
-      Type          Signal
       SrcComponent  "From7"
       SrcTerminal   1
       Points        [600, 275]
@@ -565,6 +558,13 @@ Plecs {
         DstComponent  "Product1"
         DstTerminal   3
       }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Sine Wave"
+      SrcTerminal   1
+      DstComponent  "V"
+      DstTerminal   3
     }
   }
 }
